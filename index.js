@@ -17,7 +17,7 @@ require("./Schema/Model");
 require("./Schema/Color");
 require("./Schema/issue");
 
-const mongoURI="mongodb+srv://amartyasarkar0001:amartyasarkar1@cluster0.fp2ed.mongodb.net/DeviceRepair?retryWrites=true&w=majority"
+const mongoURI="YOUR SPECIAL SETUP CLUSTER URL OF MONGO DB ATLAS"
 
 mongoose.connect(mongoURI,{
     useNewUrlParser:true,
@@ -100,9 +100,7 @@ app.post("/sendmail", (req, res) => {
     }
   });
 })
-//amartyasarkar0001
-//amartyasarkar1
-//mongodb+srv://amartyasarkar0001:<password>@cluster0.fp2ed.mongodb.net/<dbname>?retryWrites=true&w=majority
+
 app.use(express.json());
 app.use(require("./routes/handling"));
 
